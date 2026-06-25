@@ -1,0 +1,52 @@
+body {
+  padding: 0.7vw;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(194, 157, 92, 0.42), transparent 26%),
+    linear-gradient(180deg, #657a36 0%, #55682d 100%);
+  color: var(--text-main);
+  font-family: var(--body-font);
+}
+
+.page-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7vw;
+}
+
+.section-frame {
+  position: relative;
+  overflow: hidden;
+  border: var(--border-width) solid var(--bg-frame);
+  background:
+    radial-gradient(circle at center, rgba(212, 147, 66, 0.55), transparent 25%),
+    linear-gradient(180deg, rgba(100, 126, 54, 0.98), rgba(84, 105, 44, 0.98));
+}
+
+.section-frame--thin {
+  min-height: 2.1vw;
+}
+
+.section-title {
+  position: relative;
+  z-index: 2;
+  font-family: var(--display-font);
+  font-size: 2.35vw;
+  line-height: 0.9;
+  letter-spacing: 0.08vw;
+  color: var(--text-main);
+  text-shadow:
+    -0.045vw -0.045vw 0 var(--text-outline),
+    0.045vw -0.045vw 0 var(--text-outline),
+    -0.045vw 0.045vw 0 var(--text-outline),
+    0.045vw 0.045vw 0 var(--text-outline),
+    0.12vw 0.12vw 0 rgba(205, 177, 136, 0.6);
+}
+
+button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}

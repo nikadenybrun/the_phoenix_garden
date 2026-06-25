@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Phoenix Garden</title>
+  <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+
+<body>
+  <header class="hero" id="top">
+    <nav class="nav" aria-label="Главная навигация">
+      <a class="nav__brand" href="#top">The Phoenix<br />Garden</a>
+      <div class="nav__links">
+        <a href="about.html">о нас</a>
+        <a href="events.html">афиша событий</a>
+        <a href="shop.html">магазин</a>
+      </div>
+      <button class="nav__menu" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="hero__content">
+      <h1>The Phoenix<br />Garden</h1>
+      <p>за зелеными<br />полями</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" id="about">
+      <div class="intro__media">
+        <img src="images/design/terraces.jpg" alt="Зеленые чайные террасы" />
+      </div>
+      <div class="intro__card">
+        <p class="intro__lead">
+          The Phoenix Garden - проект о выращивании вулканического чая в Китае:
+          убежище для беглецов из мегаполисов, ищущих покой в неизведанном
+        </p>
+        <p class="intro__note">
+          Это новый формат отдыха через труд, погружение в иную культуру и поиск
+          себя в простоте древнейшего искусства - выращивание чая
+        </p>
+      </div>
+      <button class="book-button" type="button" data-open-booking>забронировать место</button>
+    </section>
+
+    <section class="volcano">
+      <div class="volcano__text">
+        <p>
+          на вулканическом ретрите вы не только помогаете выращивать чай, но и
+          учитесь находиться в тишине, среди чистой природы Китая
+        </p>
+      </div>
+      <img src="images/design/volcano.png" alt="Вулканический склон" />
+    </section>
+
+    <section class="schedule" id="schedule">
+      <h2>как будет выглядеть<br />твой день</h2>
+      <div class="schedule__panel">
+        <div class="schedule__copy">
+          <p>Наше расписание очень сбалансировано, в день мы не упускаем ничего важно</p>
+          <p>Мы хотим убрать привычный темп и скорость привычные жителям крупных городов</p>
+          <span>Пример того, как выглядит день на ретрите</span>
+        </div>
+        <div class="schedule__grid" aria-label="Расписание дня">
+          <span>Утро</span>
+          <span>6:00</span>
+          <span>зарядка</span>
+          <span></span>
+          <span>8:00</span>
+          <span>завтрак</span>
+          <span>День</span>
+          <span>10:00</span>
+          <span>труд на воздухе</span>
+          <span></span>
+          <span>16:00</span>
+          <span>ужин</span>
+          <span>Вечер</span>
+          <span>17:30</span>
+          <span>прогулка</span>
+          <span></span>
+          <span>21:00</span>
+          <span>отбой</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tea-story" id="store">
+      <img src="images/design/tea-ceremony.png" alt="Чайная церемония на природе" />
+      <p>
+        перед поездкой мы знакомимся с каждым участником, чтобы понять ценности
+        друг друга и провести время с максимальной пользой
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__panel">
+      <div>
+        <a class="footer__brand" href="#top">The Phoenix<br />Garden</a>
+        <p>Куратор: Камила Рихтер<br />Студент: Скранжевская Ксения<br />Группа: Б25УКИ03</p>
+      </div>
+      <nav class="footer__links" aria-label="Нижняя навигация">
+        <a href="about.html">о нас</a>
+        <a href="events.html">афиша событий</a>
+        <a href="#team">команда</a>
+        <a href="shop.html">магазин</a>
+      </nav>
+      <div class="footer__meta">
+        <div class="footer__squares" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="#privacy">Политика конфиденциальности</a>
+        <a href="#offer">Договор аферты</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="booking-modal" id="bookingDialog">
+    <form method="dialog" class="booking-modal__close-form">
+      <button type="submit" aria-label="Закрыть окно">×</button>
+    </form>
+    <form id="bookingForm" class="booking-form">
+      <h2>Забронировать место</h2>
+      <input type="text" placeholder="Ваше имя" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Телефон" />
+      <button class="book-button" type="submit">Отправить заявку</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
+  </dialog>
+
+  <script src="javascripts/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+:root {
+  --bg-main: #5f6f33;
+  --bg-dark: #3f4a20;
+  --bg-frame: #c6aa87;
+  --text-main: #231b12;
+  --text-soft: #e7d5b7;
+  --text-muted: #d6c09d;
+  --text-outline: #cdb188;
+  --accent-brown: #6f4b34;
+  --accent-orange: #b5652b;
+  --accent-gold: #bc9c63;
+  --accent-red: #973c34;
+  --border-width: 0.14vw;
+  --display-font: 'Discovery', Arial, sans-serif;
+  --body-font: 'Discovery', Arial, sans-serif;
+  --shadow-soft: 0 0 2vw rgba(255, 224, 168, 0.18);
+  --transition-base: 280ms ease;
+}

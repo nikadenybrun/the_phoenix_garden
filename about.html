@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О нас - The Phoenix Garden</title>
+  <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+
+<body class="about-page about-layout">
+  <header class="about-top">
+    <nav class="nav about-top__nav" aria-label="Главная навигация">
+      <a class="nav__brand" href="index.html">The Phoenix<br />Garden</a>
+      <div class="nav__links">
+        <a href="about.html" aria-current="page">о нас</a>
+        <a href="events.html">афиша событий</a>
+        <a href="shop.html">магазин</a>
+      </div>
+      <a class="nav__menu" href="index.html" aria-label="На главную">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </nav>
+
+    <img class="about-top__shape" src="images/about/hero-texture.png" alt="" aria-hidden="true" />
+    <div class="about-top__title">
+      <h1>The Phoenix<br />Garden</h1>
+      <p>это мечта, в которой<br />совместили все, что я<br />люблю</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-history">
+      <h2>история</h2>
+      <p>
+        В городе всё работает, но ничто не живёт. Мы поняли, что разучились чувствовать вкус
+        момента. Потому что его там просто нет.
+      </p>
+    </section>
+
+    <section class="about-place">
+      <img src="images/about/running.png" alt="Девушка бежит по полю" />
+      <div class="about-place__copy">
+        <p>
+          Мы нашли место, где всё иначе: вулканическая земля Китая, простой физический труд
+          чаеводов и природа, не похожая на нашу привычную. Здесь вы не будете зрителем — вы
+          станете участником.
+        </p>
+        <p>
+          Возьмёте в руки чайный лист, вдохнёте воздух без примеси городской суеты и вдруг
+          поймёте: вот он, вкус жизни. И он совсем не такой, как вы помнили.
+        </p>
+        <button class="book-button about-place__button" type="button" data-open-booking>
+          забронировать место
+        </button>
+      </div>
+    </section>
+
+    <section class="about-values">
+      <h2>наши<br />ценности</h2>
+      <div class="about-values__list">
+        <article>
+          <h3>возвращение к реальности</h3>
+          <p>мы отрицаем симуляцию</p>
+        </article>
+        <article>
+          <h3>осознанность через физический труд</h3>
+          <p>Наша ценность в том, чтобы вернуть радость простых движен</p>
+        </article>
+        <article>
+          <h3>смысл через ограничение</h3>
+          <p>отсутствие лишнего как высшая роскошь</p>
+        </article>
+      </div>
+      <img class="about-values__image" src="images/about/matcha-cup.png" alt="Чаша зеленого чая" />
+    </section>
+
+    <section class="about-contact">
+      <article class="about-contact__wide">
+        <img src="images/about/field-wide.png" alt="Чайное поле" />
+        <h2>чувствуете<br />то же<br />самое?</h2>
+        <p>
+          если вам близки наши идеи и ценности - пишите нам, мы поможем организовать поездки и
+          корпоративные мероприятия
+        </p>
+      </article>
+
+      <div class="about-contact__grid">
+        <article>
+          <img src="images/about/matcha-grind.png" alt="Приготовление матчи" />
+          <h2>участие в<br />ретрите</h2>
+          <p>
+            Если наш проект отозвался тебе напиши нашему менеджеру по почте
+            vulcan_retreat@mail.ru<br />
+            Мы стараемся собирать вокруг себя близких по духу нам людей, поэтому если мы с тобой
+            совпадаем по ценностям, мы будем рады принять тебя в команду
+          </p>
+        </article>
+        <article>
+          <img src="images/about/terrace-fog.png" alt="Туманные чайные террасы" />
+          <h2>корпоративные<br />поездки</h2>
+          <p>
+            Мы также проводим корпоративные поездки, если тебя это заинтересовало - напиши нашему
+            менеджеру по почте vulcan_retreat@mail.ru<br />
+            Мы вышлем корпоративную программу, презентацию и обсудим все детали
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer about-footer">
+    <div class="footer__panel">
+      <div>
+        <a class="footer__brand" href="index.html">The Phoenix<br />Garden</a>
+        <p>Куратор: Камила Рихтер<br />Студент: Скранжевская Ксения<br />Группа: Б25УКИ03</p>
+      </div>
+      <nav class="footer__links" aria-label="Нижняя навигация">
+        <a href="about.html">о нас</a>
+        <a href="events.html">афиша событий</a>
+        <a href="about.html#team">команда</a>
+        <a href="shop.html">магазин</a>
+      </nav>
+      <div class="footer__meta">
+        <div class="footer__squares" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="#privacy">Политика конфиденциальности</a>
+        <a href="#offer">Договор аферты</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="booking-modal" id="bookingDialog">
+    <form method="dialog" class="booking-modal__close-form">
+      <button type="submit" aria-label="Закрыть окно">×</button>
+    </form>
+    <form id="bookingForm" class="booking-form">
+      <h2>Забронировать место</h2>
+      <input type="text" placeholder="Ваше имя" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Телефон" />
+      <button class="book-button" type="submit">Отправить заявку</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
+  </dialog>
+
+  <script src="javascripts/scripts.js"></script>
+</body>
+
+</html>
