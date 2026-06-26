@@ -33,19 +33,19 @@
   <main>
     <section class="intro" id="about">
       <div class="intro__media">
-        <img src="images/design/terraces.jpg" alt="Зеленые чайные террасы" />
+        <img src="images/design/terrace.png" alt="Зеленые чайные террасы" />
+        <div class="intro__card">
+          <p class="intro__lead">
+            The Phoenix Garden - проект о выращивании вулканического чая в Китае:
+            убежище для беглецов из мегаполисов, ищущих покой в неизведанном
+          </p>
+          <p class="intro__note">
+            Это новый формат отдыха через труд, погружение в иную культуру и поиск
+            себя в простоте древнейшего искусства - выращивание чая
+          </p>
+        </div>
       </div>
-      <div class="intro__card">
-        <p class="intro__lead">
-          The Phoenix Garden - проект о выращивании вулканического чая в Китае:
-          убежище для беглецов из мегаполисов, ищущих покой в неизведанном
-        </p>
-        <p class="intro__note">
-          Это новый формат отдыха через труд, погружение в иную культуру и поиск
-          себя в простоте древнейшего искусства - выращивание чая
-        </p>
-      </div>
-      <button class="book-button" type="button" data-open-booking>забронировать место</button>
+      <a class="book-button" href="404.html">забронировать место</a>
     </section>
 
     <section class="volcano">
@@ -61,6 +61,7 @@
     <section class="schedule" id="schedule">
       <h2>как будет выглядеть<br />твой день</h2>
       <div class="schedule__panel">
+        <img src="images/design/yor_day.png" alt="" aria-hidden="true" />
         <div class="schedule__copy">
           <p>Наше расписание очень сбалансировано, в день мы не упускаем ничего важно</p>
           <p>Мы хотим убрать привычный темп и скорость привычные жителям крупных городов</p>
@@ -89,8 +90,37 @@
       </div>
     </section>
 
-    <section class="tea-story" id="store">
+    <section class="application_to_participate" id="store">
       <img src="images/design/tea-ceremony.png" alt="Чайная церемония на природе" />
+      <form class="application-card" action="404.html">
+        <h2>заявка на участие</h2>
+        <p>познакомимся поближе и поймем, подходим ли мы друг другу</p>
+        <label>
+          <span>Имя и Фамилия</span>
+          <input type="text" name="name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" />
+        </label>
+        <label>
+          <span>Номер телефона</span>
+          <input type="tel" name="phone" />
+        </label>
+        <label>
+          <span>Комментарий</span>
+          <input type="text" name="comment" />
+        </label>
+        <label class="application-card__check">
+          <input type="checkbox" name="privacy" />
+          <span>Даю согласие на обработку персональных данных</span>
+        </label>
+        <button type="submit">оставить заявку</button>
+        <small>
+          Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь
+          с политикой конфиденциальности
+        </small>
+      </form>
       <p>
         перед поездкой мы знакомимся с каждым участником, чтобы понять ценности
         друг друга и провести время с максимальной пользой
@@ -98,16 +128,17 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer events-footer">
+    <!-- <img class="events-footer__decor" src="images/events/footer-pink.png" alt="" aria-hidden="true" /> -->
     <div class="footer__panel">
       <div>
-        <a class="footer__brand" href="#top">The Phoenix<br />Garden</a>
+        <a class="footer__brand" href="index.html">The Phoenix<br />Garden</a>
         <p>Куратор: Камила Рихтер<br />Студент: Скранжевская Ксения<br />Группа: Б25УКИ03</p>
       </div>
       <nav class="footer__links" aria-label="Нижняя навигация">
         <a href="about.html">о нас</a>
         <a href="events.html">афиша событий</a>
-        <a href="#team">команда</a>
+        <a href="about.html#team">команда</a>
         <a href="shop.html">магазин</a>
       </nav>
       <div class="footer__meta">
@@ -121,20 +152,6 @@
       </div>
     </div>
   </footer>
-
-  <dialog class="booking-modal" id="bookingDialog">
-    <form method="dialog" class="booking-modal__close-form">
-      <button type="submit" aria-label="Закрыть окно">×</button>
-    </form>
-    <form id="bookingForm" class="booking-form">
-      <h2>Забронировать место</h2>
-      <input type="text" placeholder="Ваше имя" required />
-      <input type="email" placeholder="Email" required />
-      <input type="tel" placeholder="Телефон" />
-      <button class="book-button" type="submit">Отправить заявку</button>
-      <p id="formMessage" class="form-message"></p>
-    </form>
-  </dialog>
 
   <script src="javascripts/scripts.js"></script>
 </body>

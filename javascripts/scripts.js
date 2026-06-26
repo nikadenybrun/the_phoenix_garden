@@ -5,10 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const message = document.getElementById('formMessage');
 
   openButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      if (dialog && typeof dialog.showModal === 'function') {
-        dialog.showModal();
-      }
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.location.href = '404.html';
     });
   });
 
@@ -60,4 +59,33 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  const stickyNav = document.querySelector('.nav');
+
+  if (stickyNav) {
+    const lightSelectors = [
+      '.hero',
+      '.events-hero',
+      '.about-top',
+      '.shop-showcase',
+      '.application_to_participate',
+      '.tea-story'
+    ];
+
+    const updateNavColor = () => {
+      const navMiddleX = window.innerWidth / 2;
+      const navMiddleY = stickyNav.getBoundingClientRect().top + stickyNav.offsetHeight / 2;
+      const elementBelow = document
+        .elementsFromPoint(navMiddleX, navMiddleY + 2)
+        .find((element) => !stickyNav.contains(element));
+      const isOnDark = Boolean(elementBelow && elementBelow.closest(lightSelectors.join(',')));
+
+      stickyNav.classList.toggle('is-light', isOnDark);
+      stickyNav.classList.toggle('is-dark', !isOnDark);
+    };
+
+    updateNavColor();
+    window.addEventListener('scroll', updateNavColor, { passive: true });
+    window.addEventListener('resize', updateNavColor);
+  }
 });
