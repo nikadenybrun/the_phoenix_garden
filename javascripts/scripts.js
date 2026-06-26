@@ -19,33 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  if (form && message) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      const name = form.querySelector('input[type="text"]').value.trim();
-      const email = form.querySelector('input[type="email"]').value.trim();
-
-      if (!name || !email) {
-        message.textContent = 'Пожалуйста, заполните имя и email.';
-        message.style.color = '#9b2d24';
-        return;
-      }
-
-      message.textContent = 'Спасибо! Мы свяжемся с вами в ближайшее время.';
-      message.style.color = '#245b35';
-      form.reset();
-
-      setTimeout(() => {
-        message.textContent = '';
-        if (dialog) {
-          dialog.close();
-        }
-      }, 2500);
-    });
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll("#top").forEach((anchor) => {
     anchor.addEventListener('click', function (event) {
       const targetId = this.getAttribute('href');
       const target = document.querySelector(targetId);
